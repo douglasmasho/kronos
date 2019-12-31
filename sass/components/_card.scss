@@ -1,0 +1,132 @@
+.card{
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    -webkit-perspective: 150rem;
+    margin: 3rem;
+    transition: all .8s ease-out;
+    height: 40rem;
+    position: relative;
+
+
+    &__side{
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: .5rem;
+     
+        height: 40rem;
+        transition: .8s all ease;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.5);
+
+        &--front{
+            background-image: linear-gradient(to right bottom,
+                                               rgba($color-primary-light,1)20%,
+                                               rgba($color-primary-dark, 1));
+            // background-image: radial-gradient(rgba($color-primary-dark,1),
+            //                                   rgba($color-primary-light,1) );
+        }
+
+
+
+        &--back{
+           background-color: black;
+
+           transform: rotateY(-180deg);
+        //    background-image: linear-gradient(to right bottom,
+        //                                       rgba($color-secondary-light, 1)5%,
+        //                                       rgba($color-secondary-dark, 1));
+                         
+        
+        }
+    }
+
+    &:hover{
+        transform: scale(1.1);
+    }
+
+    &:hover &__side--front{
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0);
+    }
+
+    &__pic{
+        display: inline-block;
+        margin: 1rem;
+        position: absolute;
+        left: 45%;
+        transform:translateX(-50%);
+        width: 10rem;
+
+        &--2{
+            width: 15rem;
+            margin-top: -.5rem;
+        } 
+    }
+
+    &__details{
+        position: absolute;
+        top: 60%;
+        // text-align: center;
+        display: block;
+        left: 50%;
+        transform:translateX(-50%);
+        width: 70%;
+    }
+
+    &__text{
+        font-size: 1.6rem;
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid black;
+
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__hover{
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 1rem;
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+
+    &__cta{
+        display: block;
+        position: relative;
+        top: 5rem;
+        text-align: center;
+
+        &-only{
+            color:red;
+            font-size: 3rem;
+        }
+    }
+
+    &__price{
+        color: white;
+        text-align: center;
+        font-size: 7rem;
+        font-weight: 100;
+        font-family: 'abel', sans-serif;
+        text-decoration: underline;
+    }
+
+    &__button{
+        position: absolute;
+        bottom: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+    }
+}

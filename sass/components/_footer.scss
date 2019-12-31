@@ -1,0 +1,107 @@
+.footer{
+
+    &__nav{
+        list-style: none;
+        border-top: 2px red solid;
+        padding: 2rem;
+        display: inline-block;
+
+    }
+
+    &__item{
+        display: inline-block;
+      &:not(:last-child){
+            margin-right: 2rem;
+        }
+
+    }
+
+    &__link{
+        text-transform: uppercase;
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        transition: all .5s;
+        font-size: 1.6rem;
+        z-index: 100;
+        margin-top: 0;
+        padding: 0.3rem 0;
+        
+
+
+
+
+
+        background-image: linear-gradient(120deg,
+        rgba(255, 255, 255, 0) 0%,
+         rgba(255, 255, 255, 0) 50%,
+         black 50%
+         );
+
+        background-size: 250%; 
+
+        &:hover{
+            background-position: 100%;
+            color: white;
+            transform: scale(1.5);
+            margin-left: 0.3rem;
+           
+        }
+
+        &-2{
+            text-transform: uppercase;
+            display: inline-block;
+            text-decoration: none;
+            transition: all .5s;
+
+            background-image: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 0%,
+             rgba(255, 255, 255, 0) 50%,
+             black 50%
+             );
+    
+            background-size: 250%; 
+
+
+
+            &:hover{
+                background-position: 100%;
+                color: white;
+                transform: scale(1.2);
+ 
+            }  
+            
+            &--d{
+                background-image: linear-gradient(120deg,
+                rgba(255, 255, 255, 0) 0%,
+                 rgba(255, 255, 255, 0) 50%,
+                 rgb(92, 0, 153) 50%
+                 );
+        
+
+            }
+
+
+        }
+    }
+
+    &__copy{
+        border-top: 2px red solid;
+        padding-top: 3rem;
+    }
+
+    &__text{
+        font-size: 1.6rem;
+        color: white;
+        display: block;
+        
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__logo{
+        width: 40rem;
+    }
+
+}

@@ -1,0 +1,129 @@
+*,
+*::after,
+*::before{
+   margin: 0;
+   padding: 0;
+  box-sizing: inherit;
+}
+
+html{
+    font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
+
+    font-size: 62.5%;    //1rem = 10px
+
+    @include respond(tab-land){
+      font-size: 56.25%;     // 1rem = 9px
+    }
+
+    @include respond(tab-port){
+      font-size: 50%;           //1rem  =  8px
+    }
+
+    @include respond(phone){
+      font-size: 40%;   //1rem  =  4.8px
+    }
+
+    @include respond(big-desktop){
+      font-size: 75%;
+    }
+
+
+
+  }
+
+  
+body{
+      margin: 0;
+      background-color: rgb(54, 49, 49);
+      position: relative;
+      box-sizing: border-box;
+  }
+
+.middle{
+   position: relative;
+   margin: 2rem 0;
+   @include center;
+}
+
+.logocorner{
+  position: absolute;
+  z-index: 100;
+  width: 20rem;
+}
+
+.iframe-container{
+
+  width: 80%;
+
+
+  @include center;
+  @include clearfix;
+
+  iframe{
+    width: 50%;
+
+    @include center;
+    border: red 1px solid;
+    border-radius: 3px;
+    padding: 5px;
+    transition: all .2s;
+
+    &:hover{
+        border: red .4rem solid;
+    }
+    
+
+  }
+   
+
+}
+
+.form-container{
+  // display: inline-block;
+  width: 30%;
+  @include center;
+
+}
+
+.logo-box{
+  display: block;
+  // position: relative;
+  // @include clearfix;
+  // height: 200px;
+  text-align: center;
+}
+
+.navbox{
+  height: 3rem;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  backface-visibility: hidden;
+}
+
+.logo1{
+  // position: relative;
+  // top: 1.2rem;
+  width: 15rem;
+  padding: 3px;
+  transition: all .4s ease-in-out;
+
+  background-image: linear-gradient(120deg,
+  rgba(255, 255, 255, 0.61) 0%,
+   rgba(255, 255, 255, 0) 50%,
+   rgb(255, 255, 255) 50%
+   );
+
+  background-size: 250%; 
+
+  
+  &:hover{
+    background-position: 100%;
+    transform: translateX(2rem);
+  }
+  
+
+}
+
