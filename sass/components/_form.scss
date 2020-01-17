@@ -1,14 +1,18 @@
 .form{
-    @include center;
+    // @include center;
     display: inline-block;
     width: 80%;
-    margin: 0 auto;
+    // margin: 0 auto;
     top: 55%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     
- 
 
     &-container{
         margin: .5rem 0;
+        width: 40%;
+
     }
 
     &__text{

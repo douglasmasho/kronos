@@ -11,7 +11,7 @@
   <link href="img/icon.png" rel="shortcut icon" type="image/png">
   <link rel="stylesheet" href="css/iconfont.css">
 
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script type = "text/javascript">
         $(window).on('scroll', function(){
             if ($(window).scrollTop()){
@@ -26,22 +26,26 @@
     <script type = "text/javascript">
         $(window).on('scroll', function(){
             if ($(window).scrollTop()){
-                $('ul').addClass('black');
+                $('ul.navigation').addClass('black');
             }
             else 
             {
-                $('ul').removeClass('black');   
+                $('ul.navigation').removeClass('black');   
             }
         })
+  </script> -->
+  <script> 
+      function clickLabel (){
+        document.getElementById("label").click() ;
+      }
   </script>
+
 </head>
 <body>
     <header id="header" class="section-header row" style="margin: 0;" >
         <div class="col-1-of-2">
             <a href="#"><img src="img/logo1.png" alt="logo" class="logo1" id="header-img"></a>
         </div>
-
-
         <nav class="navbox col-1-of-2" id="nav-bar" style="width: 60%;">
             <ul class="navigation">
                             <li class="navigation__item"><a href="#section-about" class="navigation__link nav-link">About Us</a></li>
@@ -50,11 +54,30 @@
                             <li class="navigation__item"><a href="#section-how" class="navigation__link nav-link">How it works</a></li>
                             <li class="navigation__item"><a href="#section-order" class="navigation__link nav-link">Order Now</a></li>
             </ul>
-
-
         </nav>
-
     </header>
+
+    <div class="navi-vert" id = "nav-parent">
+        <input type="checkbox" class="navi-vert__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navi-vert__button" id = "label">
+            <span class="navi-vert__icon">&nbsp;</span>
+        </label>
+
+        <div class="navi-vert__background">&nbsp;</div>
+        <a href="#"><img src="img/logovert.png" alt="logo" id="vert-img" ></a>
+
+
+        <nav class="navi-vert__nav" id = "nav-child">
+            <ul class="navi-vert__list">
+                <li class="navi-vert__item"><a href="#section-about" class="navi-vert__link" onclick = "clickLabel()" >About Us</a></li>
+                <li class="navi-vert__item"><a href="#section-features" class="navi-vert__link" onclick = "clickLabel()">Features</a></li>
+                <li class="navi-vert__item"><a href="#section-models" class="navi-vert__link" onclick = "clickLabel()">Models</a></li>
+                <li class="navi-vert__item"><a href="#section-how" class="navi-vert__link" onclick = "clickLabel()">How it works</a></li>
+                <li class="navi-vert__item"><a href="#section-order" class="navi-vert__link" onclick = "clickLabel()">Order Now</a></li>
+            </ul>
+        </nav>
+    </div>
+    
 
     <section class="header-slide">
         <div id="slider">
@@ -356,6 +379,7 @@
 
 
      </section>
+    
 
      <!-- grid -->
 

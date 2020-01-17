@@ -1,5 +1,10 @@
 .footer{
 
+    &__navbox{
+        display: flex;
+        justify-content: center;
+    }
+
     &__nav{
         list-style: none;
         border-top: 2px red solid;

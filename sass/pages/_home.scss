@@ -4,9 +4,8 @@
     rgba($color-primary-dark, 0.501) )
       ,url(../img/featuresbg.jpg);
     background-size: cover;
-    height: 115vh;
-    padding: 2rem 0;
-
+    // height: 115vh;
+    padding: 2rem 2rem;
 
 }
 
@@ -14,8 +13,8 @@
     background-image: url(../img/daniele-levis-pelusi-Tizbbx-5esA-unsplash.jpg);
     background-size: cover;
     background-position: center;
-    height: 105vh;
-    padding: 2rem 0;
+    // height: 105vh;
+    padding: 2rem 6rem;
     position: relative;
 
 
@@ -35,7 +34,7 @@
   //                                   rgba($color-primary-dark, .5) ),
   //                                   url(../img/howitworks-bg.jpg);
   background-size: cover;                                    
-  height: 100vh;
+  // height: 100vh;
   background-image: url(../img/howitworks-bg.jpg);
   position: relative;
   padding: 2rem 1rem ;
@@ -46,7 +45,7 @@
                                       rgba($color-primary-dark, .5) ),
                                       url(../img/formbg.jpg);
   background-size: cover;
-  height: 100vh;
+  // height: 100vh;
   padding: 2rem 1rem;
   position: relative;
   
@@ -65,4 +64,9 @@
   background-color: rgba(255, 255, 255, 0.5);
   backface-visibility: hidden;
   backdrop-filter: blur(5px);
+  
+  @include respond(tab-port){
+    visibility: hidden;
+  }
 }
+
