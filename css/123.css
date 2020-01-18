@@ -17,7 +17,7 @@ html {
       font-size: 50%; } }
   @media (max-width: 37.5em) {
     html {
-      font-size: 40%; } }
+      font-size: 45%; } }
   @media (min-width: 112.5em) {
     html {
       font-size: 75%; } }
@@ -90,6 +90,9 @@ body {
     background-position: 100%;
     transform: translateX(1rem); }
 
+.smaller {
+  width: 60%; }
+
 .slide-text {
   font-size: 4.5rem;
   text-transform: uppercase;
@@ -151,6 +154,12 @@ body {
   backdrop-filter: blur(5px);
   transition: all .4s;
   position: relative; }
+  @media (max-width: 56.25em) {
+    .head-text {
+      font-size: 4rem; } }
+  @media (max-width: 37.5em) {
+    .head-text {
+      font-size: 3rem; } }
   .head-text:hover {
     letter-spacing: 3rem; }
 
@@ -271,6 +280,9 @@ body {
   transition: all .4s;
   cursor: pointer;
   box-shadow: 0px 9px 9px 0px rgba(0, 0, 0, 0.3); }
+  @media (max-width: 56.25em) {
+    .feature-box {
+      width: 60%; } }
   .feature-box__icon {
     font-size: 5rem;
     background-image: linear-gradient(to right, rgba(255, 119, 0, 0.5) 50%, #ff1100);
@@ -302,8 +314,13 @@ body {
   -webkit-perspective: 150rem;
   margin: 3rem;
   transition: all .8s ease-out;
-  height: 40rem;
-  position: relative; }
+  height: 40rem; }
+  @media (max-width: 56.25em) {
+    .card {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      position: relative; } }
   .card__side {
     position: absolute;
     top: 0;
@@ -322,6 +339,9 @@ body {
       transform: rotateY(-180deg); }
   .card:hover {
     transform: scale(1.1); }
+    @media (max-width: 56.25em) {
+      .card:hover {
+        transform: scale(1); } }
   .card:hover .card__side--front {
     transform: rotateY(180deg); }
   .card:hover .card__side--back {
@@ -333,6 +353,9 @@ body {
     left: 45%;
     transform: translateX(-50%);
     width: 10rem; }
+    @media (max-width: 56.25em) {
+      .card__pic {
+        left: 47.5%; } }
     .card__pic--2 {
       width: 15rem;
       margin-top: -.5rem; }
@@ -358,6 +381,9 @@ body {
     text-align: center;
     display: block;
     width: 100%; }
+    @media (max-width: 56.25em) {
+      .card__hover {
+        display: none; } }
   .card__cta {
     display: block;
     position: relative;
@@ -373,6 +399,9 @@ body {
     font-weight: 100;
     font-family: 'abel', sans-serif;
     text-decoration: underline; }
+    @media (max-width: 75em) {
+      .card__price {
+        font-size: 5rem; } }
   .card__button {
     position: absolute;
     bottom: 20%;
@@ -380,6 +409,38 @@ body {
     transform: translateX(-50%);
     width: 100%;
     text-align: center; }
+  @media (max-width: 56.25em) {
+    .card {
+      height: auto; }
+      .card__side {
+        height: auto;
+        position: relative;
+        box-shadow: none; }
+        .card__side--back {
+          background-color: red;
+          transform: rotateY(0); }
+      .card:hover .card__side--front {
+        transform: rotateY(0); }
+      .card__cta {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        padding: 7rem 4rem 4rem 4rem; }
+      .card__price {
+        position: relative;
+        bottom: 7rem;
+        font-size: 5rem; }
+      .card__pic {
+        position: relative; }
+      .card__details {
+        position: static;
+        display: block;
+        transform: translateX(0%);
+        width: 100%; }
+      .card__side {
+        border-radius: 0px; } }
 
 .button {
   font-size: 2rem;
@@ -475,7 +536,7 @@ body {
   text-transform: uppercase;
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color: red;
   transition: all .5s;
   font-size: 1.6rem;
   z-index: 100;
@@ -515,6 +576,9 @@ body {
 
 .footer__logo {
   width: 40rem; }
+  @media (max-width: 56.25em) {
+    .footer__logo {
+      width: 30rem; } }
 
 .navigation {
   display: block;
@@ -740,11 +804,20 @@ ul.black {
     @media (max-width: 56.25em) {
       .row .col-1-of-4 {
         width: 100%; } }
+  @media (max-width: 56.25em) and (max-width: 56.25em) {
+    .row .col-1-of-4 {
+      display: flex;
+      justify-content: center; } }
   .row .col-1-of-3 {
     width: 66.6666666666667%; }
     @media (max-width: 56.25em) {
       .row .col-1-of-3 {
         width: 100%; } }
+  @media (max-width: 56.25em) and (max-width: 56.25em) {
+    .row .col-1-of-3 {
+      width: 100%;
+      display: flex;
+      justify-content: center; } }
   .row .col-1-of-2 {
     width: 50%; }
     @media (max-width: 56.25em) {
@@ -782,7 +855,8 @@ ul.black {
 
 .section-footer {
   padding: 2rem;
-  position: relative; }
+  position: relative;
+  background-color: #222121; }
 
 .section-header {
   position: fixed;

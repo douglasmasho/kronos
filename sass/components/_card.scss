@@ -5,8 +5,12 @@
     margin: 3rem;
     transition: all .8s ease-out;
     height: 40rem;
-    position: relative;
-
+    @include respond(tab-port){
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
 
     &__side{
         position: absolute;
@@ -17,6 +21,9 @@
         height: 40rem;
         transition: .8s all ease;
         width: 100%;
+
+
+
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.5);
@@ -45,6 +52,9 @@
 
     &:hover{
         transform: scale(1.1);
+        @include respond(tab-port){
+            transform: scale(1);
+        }
     }
 
     &:hover &__side--front{
@@ -62,6 +72,11 @@
         left: 45%;
         transform:translateX(-50%);
         width: 10rem;
+        @include respond(tab-port){
+            left: 47.5%;
+ 
+        }
+    
 
         &--2{
             width: 15rem;
@@ -98,6 +113,9 @@
         text-align: center;
         display: block;
         width: 100%;
+        @include respond(tab-port){
+            display: none;
+        }
     }
 
     &__cta{
@@ -119,6 +137,10 @@
         font-weight: 100;
         font-family: 'abel', sans-serif;
         text-decoration: underline;
+
+        @include respond(tab-land){
+            font-size: 5rem;
+        }
     }
 
     &__button{
@@ -129,4 +151,62 @@
         width: 100%;
         text-align: center;
     }
+
+
+    //MEDIA QUERY
+    @include respond(tab-port){
+        height: auto ;
+        // border-radius: 3px;
+
+
+                &__side{
+                  height: auto;
+                  position: relative;
+                  box-shadow: none;
+       
+                     &--back{
+                     background-color: red;
+                     transform: rotateY(0);                     
+                    }
+       
+                 }
+
+                 &:hover &__side--front{
+                    transform: rotateY(0) ;
+                }
+
+                &__cta{
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    transform: translate(0);
+                    width: 100%;
+                    padding: 7rem 4rem 4rem 4rem;
+                 }        
+                 
+                 &__price{
+                    position: relative;
+                     bottom: 7rem;
+                     font-size: 5rem;
+                 }
+
+                 &__pic{
+                     position: relative;
+                 }
+
+                 &__details{
+                     position: static;
+                     // text-align: center;
+                     display: block;
+                     transform:translateX(0%);
+                     width: 100%;
+                 }
+
+                 &__side{
+                     border-radius: 0px;
+                 }
+    
+        }
+
 }
+

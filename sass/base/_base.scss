@@ -21,7 +21,7 @@ html{
     }
 
     @include respond(phone){
-      font-size: 40%;   //1rem  =  4.8px
+      font-size: 45%;   //1rem  =  4.8px
     }
 
     @include respond(big-desktop){
@@ -161,4 +161,8 @@ background-size: 250%;
 }
 
 
+}
+
+.smaller{
+  width: 60%;
 }

@@ -63,9 +63,16 @@
     color: white;
     display: inline-block;
     letter-spacing: 2rem;
-
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
+    @include respond(tab-port){
+      font-size: 4rem;           //1rem  =  8px
+    }
+
+    @include respond(phone){
+      font-size: 3rem;   //1rem  =  4.8px
+    }
+
 
 
     transition: all .4s;
