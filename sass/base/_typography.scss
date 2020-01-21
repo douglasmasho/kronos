@@ -1,9 +1,9 @@
 .slide-text{
     font-size: 4.5rem;
     text-transform: uppercase;
-    position: absolute;
+    position: relative;
     display: block;
-    bottom: 45%;
+    bottom: 0%;
     text-align: center;
     /* left: 50%; */
     /* transform: translateX(-50%); */
@@ -16,7 +16,6 @@
     letter-spacing: 2rem;
     display: block;
     width: 100%;
-
   }
 
   .secondary{
